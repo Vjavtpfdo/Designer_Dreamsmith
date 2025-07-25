@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation</title>
+</head>
+<body>
+    <h1>Your Outfit Recommendation</h1>
+    <p>{{ description }}</p>
+    <img src="{{ image_url }}" alt="Recommended Outfit">
+    <h2>Matching Accessories:</h2>
+    <ul>
+        {% for accessory in accessories %}
+            <li>{{ accessory }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Get Another Recommendation</a>
+</body>
+</html>

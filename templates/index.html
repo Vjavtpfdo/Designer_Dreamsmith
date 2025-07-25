@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Stylist Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chatbot">
+        <h1>Personal Stylist Chatbot</h1>
+        <form action="/recommend" method="post">
+            <label for="color">Favorite Color:</label>
+            <input type="text" name="color" required>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unisex">Unisex</option>
+            </select>
+
+            <label for="top_bottom">Top/Bottom:</label>
+            <select name="top_bottom" required>
+                <option value="top">Top</option>
+                <option value="bottom">Bottom</option>
+            </select>
+
+            <label for="occasion">Occasion:</label>
+            <select name="occasion" required>
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+                <option value="party">Party</option>
+                <option value="sports">Sports</option>
+            </select>
+
+            <label for="style">Style Preference:</label>
+            <input type="text" name="style" required>
+
+            <label for="age">Age Group:</label>
+            <select name="age" required>
+                <option value="kids">Kids</option>
+                <option value="teens">Teens</option>
+                <option value="adults">Adults</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+    </div>
+</body>
+</html>
